@@ -88,10 +88,7 @@ module Btce
     end
 
     def nonce
-      while result = Time.now.to_i and @last_nonce and @last_nonce >= result
-        sleep 1
-      end
-      return @last_nonce = result
+      Time.now.to_i
     end
     private :nonce
 
