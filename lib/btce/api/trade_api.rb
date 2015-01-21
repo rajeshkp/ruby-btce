@@ -61,7 +61,7 @@ module Btce
       @secret = opts[:secret]
     end
 
-    def initialize_api(api_key, api_secret)
+    def self.initialize_api(api_key, api_secret)
       new key: api_key, secret: api_secret
     end
 
